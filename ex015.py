@@ -1,0 +1,5 @@
+print('Seja Bem-vindo ao nosso estabelecimento, espero que tenha aproveitado sua viagem!')
+km = float(input('Peço que nos informe a quantidade de km percorridos: '))
+d = float(input('Nos informe também quantos dias o carro ficou em sua posse: '))
+p = (60 * d) + (km * 0.15)
+print('O total a pagar pelo uso foi de R$ {:.2F}.' .format(p))
