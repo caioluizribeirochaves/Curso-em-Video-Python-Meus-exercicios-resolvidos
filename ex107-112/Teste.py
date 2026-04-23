@@ -1,7 +1,6 @@
-from moeda import aumentar, diminuir, dobro, metade, form
+import ex107-112.utilidadesCeV.moeda
+from ex107-112.utilidadesCeV.moeda import resumo
+
 num = float(input('Digite um número: R$'))
-print(f'O dobro de {form(num)} é {form(dobro(num))}')
-print(f'A metade de {form(num)} é {form(metade(num))}')
-print(f'Aumentado 10% de {form(num)} é {form(aumentar(num, 10))}')
-print(f'Diminuindo 10% de {form(num)} é {form(diminuir(num, 10))}')
+resumo(num)
  
