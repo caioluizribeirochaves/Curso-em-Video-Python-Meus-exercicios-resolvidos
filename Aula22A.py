@@ -1,10 +1,6 @@
-def fatorial(n):
-    f = 1
-    for c in range(1, n + 1):
-        f *= c
-    return f
-
-
+import Aula22Uteis
 num = int(input('Digite um número: '))
-fat = fatorial(num)
+fat = Aula22Uteis.fatorial(num)
 print(f'O fatorial de {num} é {fat}')
+print(f'O dobro de {num} é {Aula22Uteis.dobro(num)}')
+print(f'O triplo de {num} é {Aula22Uteis.triplo(num)}')
