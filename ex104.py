@@ -17,5 +17,5 @@ def leiaInt(msg):
     return valor
 
 
-n = leiaInt('Digite um número: ')
-print(f'Você acabou de digitar o número {n}')
+num = leiaInt('Digite um número: ')
+print(f'Você acabou de digitar o número {num}')
