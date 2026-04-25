@@ -1,4 +1,5 @@
-Caio; 27
-Gislene; 50
-Geraldo; 50
-Giovanna; 24
+Caio;27
+Gislene;50
+Geraldo;50
+Giovanna;24
+Victor;27
