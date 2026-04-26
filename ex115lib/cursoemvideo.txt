@@ -3,3 +3,6 @@ Gislene;50
 Geraldo;50
 Giovanna;24
 Victor;27
+Marco Tulio;24
+Creuza;70
+;23
