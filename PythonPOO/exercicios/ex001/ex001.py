@@ -8,6 +8,7 @@ class Gafanhoto:
     # Métodos de Instância
     def aniversario(self):
         self.idade += 1
+        return f'{self.nome} fez aniversário e agora tem {self.idade} anos de idade'
 
     def mensagem(self):
         return f'{self.nome} é Gafanhoto(a) e tem {self.idade} anos de idade.'
@@ -17,3 +18,4 @@ g1 = Gafanhoto()
 g1.nome = 'Caio'
 g1.idade = 27
 print(g1.mensagem())
+print(g1.aniversario())
