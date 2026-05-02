@@ -6,69 +6,36 @@ from rich import print
 from rich.panel import Panel
 
 class Churrasco:
-    def __init__(self,titulo, quantidade=0):
+    # Atributo de Classe
+    consumo_padrao = 0.400 # Cada pessoa come uma média de 400g de carne
+    preco_kg = 82.40 # Cada Kg de carne custa R$82.40
+
+    def __init__(self, titulo='<Não informado>', quantidade=0):
         self.titulo = titulo
         self.quantidade = quantidade
 
-    def calculo(self):
-        return self.quantidade * 0.4
+    def calculo(self) -> float:
+        return self.quantidade * self.__class__.consumo_padrao # Posso usar também Churrasco.consumo_padrao
 
-    def custo(self):
-        return self.calculo() * 82.40
+    def custo(self) -> float:
+        return self.calculo() * self.__class__.preco_kg # Posso usar também Churrasco.preco_kg
 
-    def custopessoa(self):
+    def custopessoa(self) -> float:
         return self.custo() / self.quantidade
 
     def analisar(self):
-        titulo = self.titulo
         dados = f'Analisando [green]{self.titulo}[/] com [blue]{self.quantidade} convidados[/]'
-        dados += '\nCada Participante comerá 0.4Kg e cada Kg Custa R$82.40'
+        dados += f'\nCada Participante comerá em média {Churrasco.consumo_padrao:.3f} gramas e cada Kg Custa R${Churrasco.preco_kg:.2f}'
         dados += f'\nRecomendo [blue]comprar {self.calculo():.3f}Kg[/] de carne'
         dados += f'\nO custo total será de [green]R${self.custo():.2f}[/]'
         dados += f'\nCada pessoa pagará [yellow]R${self.custopessoa()}[/] para participar.'
-        return Panel(dados, title=titulo)
+        painel = Panel(dados, title=self.titulo)
+        return painel
 
 
 c1 = Churrasco('Churras dos Brothers', 10)
 print(c1.analisar())
 
-c2 = Churrasco('Churras dos Amigos', 15)
+c2 = Churrasco('Festa de Fim de Ano', 80)
 print(c2.analisar())
 
-#
-#
-# from rich import print
-# from rich.table import Table
-#
-#
-# class Churrasco:
-#     preco_carne:float = 82.4 #82,4R$/kg
-#     kg_carne_pessoa:float = 0.4 #400g/pessoa
-#
-#
-#     def __init__(self, titulo, pessoas):
-#         self.title=titulo
-#         self.people=pessoas
-#
-#
-#     def carne(self):
-#         total_carne = self.people * Churrasco.kg_carne_pessoa
-#         total_churras = total_carne * self.__class__.preco_carne
-#         preco_pessoa = total_churras/self.people
-#         #return (f" O total de carne será {total_carne} Kgs e o valor do churrasco é R$ {total_churras} \n "
-#                 #f"Para {self.people} pessoas, o valor do churrasco é R$ {preco_pessoa} cada")
-#         tabela = Table(title=f"[bold red]{self.title}".center(30), width=80,style='blue',)
-#         tabela.add_column(f"[yellow]Qtd. Pessoas",justify="center", width= 7, style='green')
-#         tabela.add_column("[yellow]Total de Carne (Kg)",justify='center', width=12, style='green')
-#         tabela.add_column("[yellow]Total do Churrasco (R$)",justify='center', width=14, style='green')
-#         tabela.add_column("[yellow]Valor por Pessoa (R$)", justify='center', width=12, style='green')
-#         tabela.add_row(f"{self.people}",
-#                        f"{total_carne:.2f}".replace('.',','),
-#                        f"{total_churras:.2f}".replace('.',','),
-#                        f"{preco_pessoa:.2f}".replace('.',','))
-#         print(tabela)
-#
-# churras1 = Churrasco("Churras dos Brothers", 15)
-# churras2 = Churrasco("Aniversário Bombástico", 50)
-# churras1.carne()
-# churras2.carne()
