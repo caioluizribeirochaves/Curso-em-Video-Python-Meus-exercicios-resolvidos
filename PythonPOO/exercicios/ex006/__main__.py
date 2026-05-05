@@ -1,5 +1,7 @@
 from rich import print, inspect
-from classesex005 import Aluno, Professor, Funcionario
+from Aluno import Aluno
+from Professor import Professor
+from Funcionario import Funcionario
 
 def main():
     a1 = Aluno('Caio', 27, 'ADS', 'EAD')
