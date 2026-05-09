@@ -5,6 +5,7 @@ class Avaliacao:
         self.materia = materia
         self._nota = nota
 
+    # Atributos Validáveis @getter @setter @deleter
     @property
     def nota(self): # Getter
         return self._nota
