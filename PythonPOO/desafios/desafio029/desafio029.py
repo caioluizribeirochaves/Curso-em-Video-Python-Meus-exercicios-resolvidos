@@ -30,5 +30,5 @@ class Diario:
         raise PermissionError(f'Ninguém tem permissão de ver a senha!')
 
     @senha.setter
-    def senha(self, novasenha = None):
+    def senha(self, novasenha = None): # Voltar aqui para tentar desenvolver essa parte da nova senha
         self.__senha = novasenha
