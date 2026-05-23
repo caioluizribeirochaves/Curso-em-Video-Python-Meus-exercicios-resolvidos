@@ -71,4 +71,3 @@ class Retangulo:
             self.altura = valores[1]
         else:
             raise ValueError('Informe um valor númerico válido para altura!')
-
