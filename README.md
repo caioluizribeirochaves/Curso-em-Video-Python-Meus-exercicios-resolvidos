@@ -10,4 +10,5 @@ Aqui foi trabalhado coisas como:
 - Loop Infinito
 - Funções
 - POO
+  
 A pratica realizada nesse reposítorio irá se manter ad aeternum.
