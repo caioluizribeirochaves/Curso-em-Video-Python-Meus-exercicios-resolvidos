@@ -9,4 +9,5 @@ Aqui foi trabalhado coisas como:
 - Estruturas de Repetição
 - Loop Infinito
 - Funções
+- POO
 A pratica realizada nesse reposítorio irá se manter ad aeternum.
